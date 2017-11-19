@@ -26,7 +26,7 @@
 </script>
 <!-- Bootstrap Core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
-
+<link rel="shortcut icon" href="home_logo_vPK_icon.ico?" type="image/x-icon" />
 <!-- Custom CSS -->
 <link href="${css}/myapp.css" rel="stylesheet">
 
@@ -65,6 +65,10 @@
 				<%@include file="contact.jsp"%>
 			</c:if>
 			
+			<!-- Loading only when User clicks List Products   -->
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
 		</div>
 		<!--Footer come here -->
 		<%@include file="./shared/footer.jsp"%>
